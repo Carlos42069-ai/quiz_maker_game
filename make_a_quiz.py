@@ -24,22 +24,24 @@ def creating_a_question():
 #    - Save the question, options, and correct answer to a text file (`quiz_questions.txt`).
     with open("quiz_questions.txt", "a") as file:
         file.write(f"Question: {question}\n")
-        file.write(f"a) {a}\n")
-        file.write(f"b) {b}\n")
-        file.write(f"c) {c}\n")
-        file.write(f"d) {d}\n")
+        file.write(f"a) {option_a}\n")
+        file.write(f"b) {option_b}\n")
+        file.write(f"c) {option_c}\n")
+        file.write(f"d) {option_d}\n")
         file.write(f"Correct Answer is: {correct_answer}\n")
         file.write("---n") 
 
 #After saving the quiz:
 #    - Display a message confirming the question has been saved.
-print("Your quiz has been saved successfully!")
+    print("Your quiz has been saved successfully!")
 
 def program():
+    print("Welcome to make a quiz program!")
+
 #    - Ask if the user wants to create another question or exit the program.
     while True:
-        make_again = input("Would you like to (1) create another quiz or (2) exit?: ")
-        if make_again == "1":
+        make = input("\nWould you like to (1) create quiz or (2) exit?: ")
+        if make == "1":
             creating_a_question()
             another_question = input("Do you want to create another question? (yes/no): ")
             if another_question != "yes":
@@ -47,12 +49,12 @@ def program():
                 break
             
 #If the user chooses to exit:
-        elif make_again == "2":
+        elif make == "2":
 #    - Display a exiting message.
             print("Thank you for creating the quizzes!")
             break
         else:
-                print("Please enter between choices 1 and 2.")
+            print("Please enter between choices 1 and 2.")
 #    - End the program after.
 program()
 #End
