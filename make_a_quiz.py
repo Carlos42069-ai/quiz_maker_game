@@ -28,17 +28,31 @@ def creating_a_question():
         file.write(f"b) {b}\n")
         file.write(f"c) {c}\n")
         file.write(f"d) {d}\n")
-        file.write(f"Correct Answer is: {correct_answer}\n")\
+        file.write(f"Correct Answer is: {correct_answer}\n")
         file.write("---n") 
-
-
 
 #After saving the quiz:
 #    - Display a message confirming the question has been saved.
+print("Your quiz has been saved successfully!")
+
+def program():
 #    - Ask if the user wants to create another question or exit the program.
-
+    while True:
+        make_again = input("Would you like to (1) create another quiz or (2) exit?: ")
+        if make_again == "1":
+            creating_a_question()
+            another_question = input("Do you want to create another question? (yes/no): ")
+            if another_question != "yes":
+                print("Thanks for using the make a quiz program!")
+                break
+            
 #If the user chooses to exit:
+        elif make_again == "2":
 #    - Display a exiting message.
+            print("Thank you for creating the quizzes!")
+            break
+        else:
+                print("Please enter between choices 1 and 2.")
 #    - End the program after.
-
+program()
 #End
