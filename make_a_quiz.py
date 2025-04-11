@@ -15,7 +15,14 @@ def creating_a_question():
                     
 
 #    - Ask for the correct answer (a, b, c, or d).
+    correct_answer = input("What is the correct answer in the following choices (a/b/c/d)? ")
+    while correct_answer not in ['a', 'b', 'c', 'd']:
+        print("The entered input is invali. Please try again.")
+        correct_answer = input("What is the correct answer (a/b/c/d)? ")
+    
+
 #    - Save the question, options, and correct answer to a text file (`questions.txt`).
+    
 
 #After saving the quiz:
 #    - Display a message confirming the question has been saved.
